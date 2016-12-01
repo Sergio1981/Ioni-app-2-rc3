@@ -9,7 +9,7 @@ Para que sua aplicação funcione corretamente é necessário que você inicie s
 
 Teremos apenas a pasta src e resouces então é necessário a criação do app com o comando
 
-ionic start ionic-app-2 blank --v2
+ionic start --v2 ionic-app-2 blank 
 
 Em seguida inserir as pastas deste documento em seu projeto. Porém aconselho que acompanhe a serie e utilize este documento apenas para consulta.
 
