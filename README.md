@@ -1,4 +1,4 @@
-IonicApp2
+IonicApp2 da RC3 em diante
 ==========
 
 Aplicação criada com IONIC 2, TYPESCRIPT E ANGULAR2
