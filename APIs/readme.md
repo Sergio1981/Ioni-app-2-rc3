@@ -10,4 +10,6 @@ Esta api esta programada para ser utilizada em banco offline, por tanto, deve-se
 
 O endereço utilizado é: http://localhost:82/api/api/apiRecupera.php
 
+E as demais APIs devem ser adicionadas da mesma maneira.
+
 Você deve alterá-lo para se adaptar a seu endereço local sem a porta :82.
