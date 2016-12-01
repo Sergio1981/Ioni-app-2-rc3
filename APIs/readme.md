@@ -1,8 +1,10 @@
 Mudanças na api
+===============
 
 Esta api foi utiizada na serie 'CRIANDO APLICATIVO DO ZERO COM IONIC E ANGULARJS' e as mudança ocorreram no envio de TOKENN e COUNTER que não estão mais presentes neste documento.
 
 Utilização
+==========
 
 Esta api esta programada para ser utilizada em banco offline, por tanto, deve-se adicioná-lo em um servidor local para que funcione. Você pode utilizar Wamp, Xamp ou qualquer outro pacote para tal, contanto que esteja em um servidor com suporte a Mysql e PHP.
 
