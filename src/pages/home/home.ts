@@ -8,6 +8,7 @@ import { NavController } from 'ionic-angular';
 
 import { ServiceProvider } from '../../providers/service-provider';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,6 +17,7 @@ export class HomePage implements OnInit{
       cadastro : any = {};
       users : any[];
       nomes : boolean = true;
+      teste:string;
 
       constructor(public navCtrl: NavController, public formBuilder : FormBuilder, public service : ServiceProvider) {
             this.cadastro = this.formBuilder.group({
@@ -44,7 +46,7 @@ export class HomePage implements OnInit{
       postDados() {
             this.service.postData(this.cadastro.value)
                   .subscribe(
-                        data=>console.log(data.mensage),
+                        data=>console.log(data.message),
                         err=>console.log(err)
                   );
       }
