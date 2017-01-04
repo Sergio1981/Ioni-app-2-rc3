@@ -33,11 +33,11 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
         $query = $db->prepare($sql);
         $query ->execute();
         if(!$query){
-                   $dados = array('message' => "Não foi possivel enviar os dados ");
+                   $dados = array('mensage' => "Não foi possivel enviar os dados ");
                    echo json_encode($dados);
          }
         else{
-                   $dados = array('message' => "Os dados foram inseridos com sucesso. Obrigado e bem vindo ");
+                   $dados = array('menssage' => "Os dados foram inseridos com sucesso. Obrigado e bem vindo ");
                   echo json_encode($dados);
          };
     }

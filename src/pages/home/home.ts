@@ -17,7 +17,9 @@ export class HomePage implements OnInit{
       cadastro : any = {};
       users : any[];
       nomes : boolean = true;
-      teste:string;
+      teste:any ={
+            text: 'entra'      
+      };
 
       constructor(public navCtrl: NavController, public formBuilder : FormBuilder, public service : ServiceProvider) {
             this.cadastro = this.formBuilder.group({

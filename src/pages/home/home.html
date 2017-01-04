@@ -10,7 +10,6 @@
 </ion-header>
 
 <ion-content padding>
-      {{teste}}
       <h2>Cadastro</h2>
       <form [formGroup]="cadastro" (ngSubmit)="postDados()">
             <ion-list>
@@ -31,6 +30,7 @@
                   </ion-item>
             </ion-list>
       </form>
+           <p ion-text> {{ cadastro.value.nome }}</p>
       <!--h2>Cadastro 2</h2>
       <form #f="ngForm" (ngSubmit)="postDados(f)" novalidate>
             <ion-list>
