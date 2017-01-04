@@ -29,7 +29,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
    //VERIFICA SE TEM CONEXÃO
     if($db){
-        $sql = " insert into usuarios values(NULL,' ". .$dadosnome." ',' " .$email." ',' ".md5($senha)." ' )";
+        $sql = " insert into usuarios values(NULL,'".$nome."','".$email."','".md5($senha)."')";
         $query = $db->prepare($sql);
         $query ->execute();
         if(!$query){
