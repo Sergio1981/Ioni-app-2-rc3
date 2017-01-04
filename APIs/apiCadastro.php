@@ -29,7 +29,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
    //VERIFICA SE TEM CONEXÃO
     if($db){
-        $sql = " insert into usuarios values(NULL,' ".$nome." ',' " .$email." ',' ".md5($senha)." ' )";
+        $sql = " insert into usuarios values(NULL,' ". .$dadosnome." ',' " .$email." ',' ".md5($senha)." ' )";
         $query = $db->prepare($sql);
         $query ->execute();
         if(!$query){
@@ -37,11 +37,11 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
                    echo json_encode($dados);
          }
         else{
-                   $dados = array('menssage' => "Os dados foram inseridos com sucesso. Obrigado e bem vindo ");
+                   $dados = array('mensage' => "Os dados foram inseridos com sucesso. Obrigado e bem vindo ");
                   echo json_encode($dados);
          };
     }
    else{
-          $dados = array('message' => "Não foi possivel iserir os dados! Tente novamente mais tarde.");
+          $dados = array('mensage' => "Não foi possivel iserir os dados! Tente novamente mais tarde.");
           echo json_encode($dados);
     };
