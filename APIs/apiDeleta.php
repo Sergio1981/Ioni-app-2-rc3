@@ -4,38 +4,38 @@
 header("Access-Control-Allow-Origin:http://localhost:8100");
 header("Content-Type: application/x-www-form-urlencoded");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
+    $banco="mysql:host=localhost;dbname=aula";
+    $user="root";
+    $pass="";
+
     //RECUPERAÇÃO DO FORMULÁRIO
     $data = file_get_contents("php://input");
-    $objData = json_decode($data);
+    $id = json_decode($data);
+
+
     // TRANSFORMA OS DADOS
-    $nome = $objData->nome;
-    $email = $objData->email;
-    $senha = $objData->senha;
-    // LIMPA OS DADOS
-    $nome = stripslashes($nome);
-    $email = stripslashes($email);
-    $senha = stripslashes($senha);
-    $nome = trim($nome);
-    $email = trim($email);
-    $senha = trim($senha);
+    $id = trim($id);
     $dados; // RECEBE ARRAY PARA RETORNO
+
     // INSERE OS DADOS
-    @$db = new PDO("mysql:host=localhost;dbname=aula", "root", "");
+    @$db = new PDO($banco,$user,$pass);
+
    //VERIFICA SE TEM CONEXÃO
     if($db){
-        $sql = " insert into usuarios values(NULL,'".$nome."','".$email."','".md5($senha)."')";
+        $sql = "DELETE FROM usuarios WHERE id=".$id;
         $query = $db->prepare($sql);
         $query ->execute();
         if(!$query){
-                   $dados = array('mensage' => "Não foi possivel enviar os dados ");
+                   $dados = array('mensage' => "Não foi possivel apagar os dados ");
                    echo json_encode($dados);
          }
         else{
-                   $dados = array('mensage' => "Os dados foram inseridos com sucesso. Obrigado e bem vindo ");
+                   $dados = array('mensage' => "Os dados foram apagados com sucesso.");
                   echo json_encode($dados);
          };
     }
    else{
-          $dados = array('mensage' => "Não foi possivel iserir os dados! Tente novamente mais tarde.");
+          $dados = array('mensage' => "Não foi possivel apagar os dados! Tente novamente mais tarde.");
           echo json_encode($dados);
     };
