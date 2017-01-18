@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Response, ResponseOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-//import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/toPromise';
 
 /*
   Generated class for the ServiceProvider provider.
@@ -30,13 +30,11 @@ export class ServiceProvider {
             );
       }
 
-      deleteData(id) {
+      deleteData(id):Promise<any> {
             let headers = new Headers({ 'Content-Type' : 'application/x-www-form-urlencoded' });
-            return this.http.post(this.api + "apiDeleta.php", id, {
+            return this.http.patch(this.api + "apiDeleta.php", id, {
                   headers:headers
-                  }).map(
-                  (res:Response) => {return res.json();}
-            );
+                  }).toPromise();
       }
         updateData(data) {
             let headers = new Headers({ 'Content-Type' : 'application/x-www-form-urlencoded' });
