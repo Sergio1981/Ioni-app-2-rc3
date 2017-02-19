@@ -63,7 +63,7 @@ export class HomePage implements OnInit{
             // console.log(user);
             // console.log(user.id);
             this.service.deleteData(user.id)
-                  .then(
+                  .subscribe(
                         data=>{
                               console.log(data.mensage);
                               this.getDados();
