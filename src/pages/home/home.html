@@ -25,10 +25,9 @@
                         <ion-label floating>Senha</ion-label>
                         <ion-input type="password" name="senha" formControlName="senha"></ion-input>
                   </ion-item>
-                  <ion-item>
-                        <button [disabled]="cadastro.invalid" ion-button full block color="danger">Enviar</button>
-                  </ion-item>
             </ion-list>
+                        <button [disabled]="cadastro.invalid" ion-button full block color="danger">Enviar</button>
+                  
       </form>
            <p ion-text> {{ cadastro.value.nome }}</p>
       <!--h2>Cadastro 2</h2>

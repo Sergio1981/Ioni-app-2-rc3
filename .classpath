@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="platforms/android/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="platforms/android/build/generated/source/r/debug"/>
+	<classpathentry kind="src" path="platforms/android/cordova/node_modules/properties-parser/test"/>
+	<classpathentry kind="src" path="platforms/android/CordovaLib/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="platforms/android/CordovaLib/src"/>
+	<classpathentry kind="src" path="platforms/android/src"/>
+	<classpathentry kind="lib" path="node_modules/@ionic/app-scripts/bin/closure-compiler.jar"/>
+	<classpathentry kind="lib" path="platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"/>
+	<classpathentry kind="lib" path="platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_dae93ae7a3d4def2518faeb2c5335f45b4c730e0.jar"/>
+	<classpathentry kind="lib" path="platforms/android/build/intermediates/pre-dexed/debug/debug_47021d9275376ea82c35ecc6115332ae7f9c63b7.jar"/>
+	<classpathentry kind="lib" path="platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar"/>
+	<classpathentry kind="lib" path="platforms/android/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="platforms/android/CordovaLib/build/intermediates/classes/debug"/>
+</classpath>
